@@ -1,7 +1,12 @@
-
 //Should take a pointer to a node struct and print out all of the data in the list
-id print_list(struct node *);
-
+void print_list(struct node * n){
+  printf("[ "); 
+  while(n->next != 0){
+    printf("%d ", n->i);
+    n = n->next;
+  }
+  printf("]\n");
+}
 
 
 // Should take a pointer to the existing list and the data to be added, create a new node and put it at the beginning of the list.
